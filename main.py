@@ -10,7 +10,10 @@ import hashlib
 
 # To store data
 # in our blockchain
-import JSON
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 # Flask is for creating the web
 # app and jsonify is for

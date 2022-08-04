@@ -1,0 +1,83 @@
+[
+    { 
+      "id": 1,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 2,
+      "name": "Rocket Jumper",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/5/53/Item_icon_Rocket_Jumper.png/100px-Item_icon_Rocket_Jumper.png",
+      "type": "weapon",
+      "owner": "treasurehunter26",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 3,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 4,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 5,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 6,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 7,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 8,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    },
+    { 
+      "id": 9,
+      "name": "Scattergun",
+      "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
+      "type": "weapon",
+      "owner": "gabiuss",
+      "previousHash": "0003...wuui",
+      "timestamps": ""
+    }
+]

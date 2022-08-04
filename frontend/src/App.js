@@ -1,23 +1,34 @@
-import React from 'react';
-
-import { Col, Container, Row } from 'react-bootstrap';
-
-import PlayCard from './components/PlayCard';
+import React, { useState } from 'react';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import ItemList from './components/ItemList';
+import AddItemModal from './components/AddItemModal';
+import items from './items.json';
 
 export default function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <Container>
-      <h1 className="text-center py-5">
-        <strong>Team Fortress 2 - Item Drop Simulator</strong>
-      </h1>
-      <Row className="pb-3 justify-content-center">
-        <Col sm={8}>
-          <PlayCard />
+      <Row className="justify-content-between align-items-center">
+        <Col>
+          <h1 className="py-5">
+            <strong>
+              Team Fortress 2 - Global Items
+            </strong>
+          </h1>
+        </Col>
+        <Col sm={2}>
+          <Button 
+            size="lg" 
+            variant="outline-success"
+            onClick={() => setShow(true)}
+          >
+            Insert Item
+          </Button>
         </Col>
       </Row>
-      <Row>
-        <h1 className="py-5">All Items</h1>
-      </Row>
+      <ItemList items={items} />
+      <AddItemModal show={show} closeModal={() => setShow(false)} addItem={() => {}} />
     </Container>
   );
 }

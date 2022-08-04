@@ -4,6 +4,7 @@ import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap';
 export default function AddItemModal({ show, closeModal, addItem }) {
   const initialState = {
     name: '',
+    imageUrl: '',
     type: 'weapon',
     owner: '',
   };
@@ -43,6 +44,18 @@ export default function AddItemModal({ show, closeModal, addItem }) {
                     type="text" 
                     name="name"
                     value={item.name}
+                    onChange={handleUserInput}
+                    required
+                  />
+                </Form.Group>
+              </Col>
+              <Col sm={10}>
+                <Form.Group className="pb-3">
+                  <Form.Label>Image URL</Form.Label>
+                  <Form.Control
+                    type="text" 
+                    name="imageUrl"
+                    value={item.imageUrl}
                     onChange={handleUserInput}
                     required
                   />

@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import api from './utils/api';
 import ItemList from './components/ItemList';
 import AddItemModal from './components/AddItemModal';
-import items from './items.json';
 
 export default function App() {
   const [show, setShow] = useState(false);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    api.get('/get-chain').then(response => {
+      setItems(response.data.chain);
+    })
+  }, []);
 
   return (
     <Container>
@@ -18,8 +25,8 @@ export default function App() {
           </h1>
         </Col>
         <Col sm={2}>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             variant="outline-success"
             onClick={() => setShow(true)}
           >
@@ -28,7 +35,7 @@ export default function App() {
         </Col>
       </Row>
       <ItemList items={items} />
-      <AddItemModal show={show} closeModal={() => setShow(false)} addItem={() => {}} />
+      <AddItemModal show={show} closeModal={() => setShow(false)} addItem={() => { }} />
     </Container>
   );
 }

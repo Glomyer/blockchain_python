@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import datetime
 import hashlib
 
@@ -12,13 +13,15 @@ except ImportError:
 class Blockchain:
 
     def __init__(self):
+        self.load_chain()
+
+    def load_chain(self):
         with open("blockchain.json", "r") as file:
             data = json.load(file)
             self.chain = data
 
         if not self.chain:
             self.create_block(proof=1, previous_hash=None, data="Bloco gênese")
-
 
     def create_block(self, proof, previous_hash, data):
         block = {
@@ -35,8 +38,12 @@ class Blockchain:
 
         return block
 
+    def get_chain(self):
+        self.load_chain()
+        return self.chain
 
     def return_previous_block(self):
+        self.load_chain()
         return self.chain[-1]
 
 
@@ -61,6 +68,8 @@ class Blockchain:
         return hashlib.sha256(encoded_block).hexdigest()
 
     def chain_valid(self, chain):
+        self.load_chain()
+    
         previous_block = chain[0]
         block_index = 1
 
@@ -84,6 +93,7 @@ class Blockchain:
 
 
 app = Flask(__name__)
+CORS(app)
 blockchain = Blockchain()
 
 
@@ -99,7 +109,6 @@ def mine_block():
     block = blockchain.create_block(proof, previous_hash, data)
 
     response = {
-        "message": "A block is MINED",
         "index": block["index"],
         "data": block["data"],
         "timestamp": block["timestamp"],
@@ -112,9 +121,10 @@ def mine_block():
 
 @app.route("/get-chain", methods=["GET"])
 def display_chain():
+    blockchain_blocks = blockchain.get_chain()
     chain = []
     
-    for block in blockchain.chain:
+    for block in blockchain_blocks:
         encoded_block = json.dumps(block, sort_keys=True).encode()
         block_with_hash = block.copy()
         block_with_hash['hash'] =  hashlib.sha256(encoded_block).hexdigest()

@@ -2,8 +2,7 @@ from flask import Flask, jsonify, request
 import datetime
 import hashlib
 
-# To store data
-# in our blockchain
+
 try:
     import json
 except ImportError:
@@ -12,16 +11,15 @@ except ImportError:
 
 class Blockchain:
 
-    # This function is created
-    # to create the very first
-    # block and set its hash to null
     def __init__(self):
-        self.chain = []
-        self.create_block(proof=1, previous_hash=None, data="First Block")
+        with open("blockchain.json", "r") as file:
+            data = json.load(file)
+            self.chain = data
 
-    # This function is created
-    # to add further blocks
-    # into the chain
+        if not self.chain:
+            self.create_block(proof=1, previous_hash=None, data="Bloco gênese")
+
+
     def create_block(self, proof, previous_hash, data):
         block = {
             "index": len(self.chain) + 1,
@@ -31,15 +29,17 @@ class Blockchain:
             "previous_hash": previous_hash,
         }
         self.chain.append(block)
+
+        with open("blockchain.json", "w") as file:
+            file.write(json.dumps(self.chain, ensure_ascii=False))
+
         return block
 
-    # This function is created
-    # to display the previous block
-    def print_previous_block(self):
+
+    def return_previous_block(self):
         return self.chain[-1]
 
-    # This is the function for proof of work
-    # and used to successfully mine the block
+
     def proof_of_work(self, previous_proof):
         new_proof = 1
         check_proof = False
@@ -48,7 +48,7 @@ class Blockchain:
             hash_operation = hashlib.sha256(
                 str(new_proof**2 - previous_proof**2).encode()
             ).hexdigest()
-            if hash_operation[:3] == "000":
+            if hash_operation[:5] == "00000":
                 check_proof = True
                 print(hash_operation)
             else:
@@ -83,21 +83,16 @@ class Blockchain:
         return True
 
 
-# Creating the Web
-# App using flask
 app = Flask(__name__)
-
-# Create the object
-# of the class blockchain
 blockchain = Blockchain()
 
 
-# Mining a new block
 @app.route("/create-block", methods=["POST"])
 def mine_block():
-    data = request.form.get('data')
+    print(request.form)
+    data = request.form
 
-    previous_block = blockchain.print_previous_block()
+    previous_block = blockchain.return_previous_block()
     previous_proof = previous_block["proof"]
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
@@ -115,14 +110,20 @@ def mine_block():
     return jsonify(response), 200
 
 
-# Display blockchain in json format
 @app.route("/get-chain", methods=["GET"])
 def display_chain():
-    response = {"chain": blockchain.chain, "length": len(blockchain.chain)}
+    chain = []
+    
+    for block in blockchain.chain:
+        encoded_block = json.dumps(block, sort_keys=True).encode()
+        block_with_hash = block.copy()
+        block_with_hash['hash'] =  hashlib.sha256(encoded_block).hexdigest()
+        chain.append(block_with_hash)
+
+    response = {"chain": chain, "length": len(chain)}
     return jsonify(response), 200
 
 
-# Check validity of blockchain
 @app.route("/is-valid", methods=["GET"])
 def valid():
     valid = blockchain.chain_valid(blockchain.chain)

@@ -8,11 +8,20 @@ export default function App() {
   const [show, setShow] = useState(false);
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
+  const getItems = () => {
     api.get('/get-chain').then(response => {
       setItems(response.data.chain);
-    })
+    });
+  };
+
+  useEffect(() => {
+    getItems();
   }, []);
+
+  const addItem = (item) => {
+    api.post('/create-block', item)
+    .then(() => getItems());
+  };
 
   return (
     <Container>
@@ -35,7 +44,7 @@ export default function App() {
         </Col>
       </Row>
       <ItemList items={items} />
-      <AddItemModal show={show} closeModal={() => setShow(false)} addItem={() => { }} />
+      <AddItemModal show={show} closeModal={() => setShow(false)} addItem={addItem} />
     </Container>
   );
 }

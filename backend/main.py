@@ -24,6 +24,8 @@ class Blockchain:
             self.create_block(proof=1, previous_hash=None, data="Bloco gênese")
 
     def create_block(self, proof, previous_hash, data):
+        data.update({'id': str(len(self.chain) + 1)})
+
         block = {
             "index": len(self.chain) + 1,
             "timestamp": str(datetime.datetime.now()),
@@ -99,8 +101,7 @@ blockchain = Blockchain()
 
 @app.route("/create-block", methods=["POST"])
 def mine_block():
-    print(request.form)
-    data = request.form
+    data = request.json
 
     previous_block = blockchain.return_previous_block()
     previous_proof = previous_block["proof"]

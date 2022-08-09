@@ -13,7 +13,7 @@
       "id": "1",
       "name": "Scattergun",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/1/1b/Item_icon_Scattergun.png/100px-Item_icon_Scattergun.png",
-      "type:": "weapon",
+      "type": "weapon",
       "owner": "gabiuss"
     },
     "proof": 632238,
@@ -26,7 +26,7 @@
       "id": "2",
       "name": "Rocket Jumper",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/5/53/Item_icon_Rocket_Jumper.png/100px-Item_icon_Rocket_Jumper.png",
-      "type:": "weapon",
+      "type": "weapon",
       "owner": "treasurehunter26"
     },
     "proof": 403091,
@@ -39,7 +39,7 @@
       "id": "3",
       "name": "Noise Maker",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/0/06/Item_icon_Noise_Maker_Bundle.png/100px-Item_icon_Noise_Maker_Bundle.png",
-      "type:": "consumable",
+      "type": "consumable",
       "owner": "slytherin_nemo"
     },
     "proof": 714736,
@@ -52,7 +52,7 @@
       "id": "4",
       "name": "Summer Starter Kit",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/5/5e/Item_icon_Summer_Starter_Kit.png/100px-Item_icon_Summer_Starter_Kit.png",
-      "type:": "consumable",
+      "type": "consumable",
       "owner": "amendobobopopoo"
     },
     "proof": 476581,
@@ -65,7 +65,7 @@
       "id": "5",
       "name": "Professional's Panama",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/7/72/Item_icon_Professional%27s_Panama.png/75px-Item_icon_Professional%27s_Panama.png",
-      "type:": "cosmetic",
+      "type": "cosmetic",
       "owner": "jimmy_hellpart"
     },
     "proof": 431630,
@@ -78,7 +78,7 @@
       "id": "6",
       "name": "Lollichop",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/6/65/Item_icon_Lollichop.png/100px-Item_icon_Lollichop.png",
-      "type:": "weapon",
+      "type": "weapon",
       "owner": "gabiuss"
     },
     "proof": 1108970,
@@ -91,7 +91,7 @@
       "id": "7",
       "name": "Crusader's Crossbow",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/9/9c/Item_icon_Crusader%27s_Crossbow.png/100px-Item_icon_Crusader%27s_Crossbow.png",
-      "type:": "weapon",
+      "type": "weapon",
       "owner": "n0type"
     },
     "proof": 405575,
@@ -104,7 +104,7 @@
       "id": "8",
       "name": "Twisted Topper",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/6/6a/Item_icon_Twisted_Topper.png/75px-Item_icon_Twisted_Topper.png",
-      "type:": "cosmetic",
+      "type": "cosmetic",
       "owner": "gshade75"
     },
     "proof": 737640,
@@ -117,7 +117,7 @@
       "id": "9",
       "name": "Spine-Chilling Skull",
       "imageUrl": "https://wiki.teamfortress.com/w/images/thumb/4/4c/Item_icon_Spine-Chilling_Skull.png/75px-Item_icon_Spine-Chilling_Skull.png",
-      "type:": "cosmetic",
+      "type": "cosmetic",
       "owner": "slytherin_nemo"
     },
     "proof": 600516,

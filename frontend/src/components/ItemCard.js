@@ -10,17 +10,17 @@ export default function ItemCard({ item }) {
           <Card.Title className="py-2">{item.data.name}</Card.Title>
           <Card.Subtitle className="pb-2">{item.data.type.charAt(0).toUpperCase() + item.data.type.substring(1)}</Card.Subtitle>
           <Card.Text>
-            Owned by: {item.data.owner}
-            <br />
-            <strong>
-              {item.previousHash}
-              <br />
-              {item.timestamp}
-              <br />
-              hash: {item.hash}
-              <br />
-              previous hash: {item.previous_hash}
-            </strong>
+            <strong>Owned by:</strong>
+            <p>{item.data.owner}</p>
+
+            <strong>Timestamp:</strong>
+            <p>{item.timestamp}</p>
+
+            <strong>Hash:</strong>
+            <p>{item.hash}</p>
+
+            <strong>Previous hash:</strong>
+            <p>{item.previous_hash}</p>
           </Card.Text>
         </Card.Body>
       </Card>

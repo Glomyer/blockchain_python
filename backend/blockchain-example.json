@@ -1,14 +1,14 @@
 [
   {
     "index": 1,
-    "timestamp": "2022-08-06 15:41:44.976618",
+    "timestamp": "2022-08-06 16:33:10.556457",
     "data": "Bloco gênese",
     "proof": 1,
     "previous_hash": null
   },
   {
     "index": 2,
-    "timestamp": "2022-08-06 15:42:34.183267",
+    "timestamp": "2022-08-06 16:34:03.765932",
     "data": {
       "id": "1",
       "name": "Scattergun",
@@ -17,11 +17,11 @@
       "owner": "gabiuss"
     },
     "proof": 632238,
-    "previous_hash": "761e9a83eda0a47d11ceea3f94c1ba365d2510b4b3a2994f45e963c496d7818c"
+    "previous_hash": "22684f4bc9a409a14b9de475eaa92e1e648b20893762181b74cb9886ddd1cc24"
   },
   {
     "index": 3,
-    "timestamp": "2022-08-06 15:43:42.810396",
+    "timestamp": "2022-08-06 16:34:53.981852",
     "data": {
       "id": "2",
       "name": "Rocket Jumper",
@@ -30,11 +30,11 @@
       "owner": "treasurehunter26"
     },
     "proof": 403091,
-    "previous_hash": "8e3ef9be983798978d0c278df1a42b87d6d9f023ec7095eec3f11fe4003ce4cd"
+    "previous_hash": "e2ff37ee763a4f67b9fa76aae4f5b7303e407232802c60ae79621a82b9251b61"
   },
   {
     "index": 4,
-    "timestamp": "2022-08-06 15:44:11.332299",
+    "timestamp": "2022-08-06 16:35:20.514357",
     "data": {
       "id": "3",
       "name": "Noise Maker",
@@ -43,11 +43,11 @@
       "owner": "slytherin_nemo"
     },
     "proof": 714736,
-    "previous_hash": "05dce0080b2ba8a0afe5458d4e100d7d8bc881a322c921004d73134ad4f16c6f"
+    "previous_hash": "3bee43c28c1b5cd3bdd82d6f5704e8823e79dccd73e84aa31ddc9c6b37ca5ae9"
   },
   {
     "index": 5,
-    "timestamp": "2022-08-06 15:44:42.208260",
+    "timestamp": "2022-08-06 16:36:10.634580",
     "data": {
       "id": "4",
       "name": "Summer Starter Kit",
@@ -56,11 +56,11 @@
       "owner": "amendobobopopoo"
     },
     "proof": 476581,
-    "previous_hash": "17248c69a0df2e41c047d56f0f93fd4407b836268f7645ba803220aa9a80a9e3"
+    "previous_hash": "5e04ffbddb946c23fc7af93b2f69d4ebd7700a37b98cdfa83b53ed4563796992"
   },
   {
     "index": 6,
-    "timestamp": "2022-08-06 15:45:11.202296",
+    "timestamp": "2022-08-06 16:36:42.252140",
     "data": {
       "id": "5",
       "name": "Professional's Panama",
@@ -69,11 +69,11 @@
       "owner": "jimmy_hellpart"
     },
     "proof": 431630,
-    "previous_hash": "ea7692edfdde6b367fc21e4dfad21b999ee050b178566beb39c2d87fbcfd3a2c"
+    "previous_hash": "c61001200a922812c8d0b5d0a3c9ffc2b53f2079776b2bb75a35aa3cf061d3cd"
   },
   {
     "index": 7,
-    "timestamp": "2022-08-06 15:45:29.692697",
+    "timestamp": "2022-08-06 16:37:33.033145",
     "data": {
       "id": "6",
       "name": "Lollichop",
@@ -82,11 +82,11 @@
       "owner": "gabiuss"
     },
     "proof": 1108970,
-    "previous_hash": "75c520e3767f56af8067879d6780b0dab1205f3d146515ccf2ab0044518dad35"
+    "previous_hash": "69ddf001035de8ce6ad6566959ad7d8c488254c5ee9b83ed5f70bbb9bb83171e"
   },
   {
     "index": 8,
-    "timestamp": "2022-08-06 15:46:14.110646",
+    "timestamp": "2022-08-06 16:46:31.409859",
     "data": {
       "id": "7",
       "name": "Crusader's Crossbow",
@@ -95,11 +95,11 @@
       "owner": "n0type"
     },
     "proof": 405575,
-    "previous_hash": "03015d95bdb0d028b60277605e1fcfbf622f421d0925567c216c4186d8370746"
+    "previous_hash": "f2ad328fe066f5c6b990f7cc0fe3c48b398a3bee715e765119d8cc495893a31e"
   },
   {
     "index": 9,
-    "timestamp": "2022-08-06 15:46:38.912949",
+    "timestamp": "2022-08-06 16:47:10.170930",
     "data": {
       "id": "8",
       "name": "Twisted Topper",
@@ -108,11 +108,11 @@
       "owner": "gshade75"
     },
     "proof": 737640,
-    "previous_hash": "a9126fec610b9cbd4f419b88fb410129bdef6ea61dca5db8be8c1590e8f1432b"
+    "previous_hash": "d313559c684223663c170329eab8541c0b6818c9047656dec6aa2c101673f3cf"
   },
   {
     "index": 10,
-    "timestamp": "2022-08-06 15:47:05.192009",
+    "timestamp": "2022-08-06 16:47:50.442453",
     "data": {
       "id": "9",
       "name": "Spine-Chilling Skull",
@@ -121,6 +121,6 @@
       "owner": "slytherin_nemo"
     },
     "proof": 600516,
-    "previous_hash": "cd64c62acf9c6fc351441be47992ff00a23b45461727bee0d6306cf2a2ecbdd2"
+    "previous_hash": "1a9edf3d4430952554144d030e08f29bf4f352cf230d234e815a63c363fecd5b"
   }
 ]

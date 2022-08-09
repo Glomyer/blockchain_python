@@ -24,7 +24,8 @@ class Blockchain:
             self.create_block(proof=1, previous_hash=None, data="Bloco gênese")
 
     def create_block(self, proof, previous_hash, data):
-        data.update({'id': str(len(self.chain) + 1)})
+        if type(data) == type({}):
+            data.update({'id': str(len(self.chain) + 1)})
 
         block = {
             "index": len(self.chain) + 1,
@@ -33,8 +34,8 @@ class Blockchain:
             "proof": proof,
             "previous_hash": previous_hash,
         }
+        
         self.chain.append(block)
-
         with open("blockchain.json", "w") as file:
             file.write(json.dumps(self.chain, ensure_ascii=False))
 
